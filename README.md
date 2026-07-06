@@ -1,29 +1,10 @@
-# Site DFLIX
+# DFLIX - Site premium com Área de Indicação
 
-Site estático da DFLIX pronto para publicar no GitHub Pages.
+Arquivos prontos para GitHub Pages. Substitua os arquivos do repositório pelos arquivos deste ZIP, mantendo `index.html`, `styles.css`, `script.js`, `404.html` e a pasta `assets` na raiz.
 
-## Como publicar no GitHub
-
-1. Crie ou abra o repositório `site` no usuário `d-flix`.
-2. Envie todos os arquivos deste ZIP para a raiz do repositório.
-3. Vá em **Settings > Pages**.
-4. Em **Branch**, selecione `main` e a pasta `/root`.
-5. Salve e aguarde alguns minutos.
-
-Link esperado:
-
-`https://d-flix.github.io/site/`
-
-## Estrutura
-
-- `index.html`: página principal
-- `styles.css`: visual do site
-- `script.js`: menu mobile e animações
-- `404.html`: página de erro
-- `assets/`: imagens, logos e favicon
-
-## WhatsApp configurado
-
-Todos os botões apontam para:
-
-`(51) 99546-0187`
+Inclui:
+- frase inicial preservada do site base;
+- layout mobile-first corrigido para evitar texto fora da tela e sobreposição;
+- Área de Indicação funcional com WhatsApp;
+- regra: em caso de assinatura, o indicador ganha 1 mês grátis;
+- seções de catálogo, apps, 3 pontos, planos, suporte, FAQ e teste grátis.

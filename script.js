@@ -35,3 +35,18 @@ window.addEventListener('scroll', () => {
   if (!header) return;
   header.classList.toggle('is-scrolled', window.scrollY > 20);
 }, { passive: true });
+
+const referralForm = document.getElementById('referralForm');
+if (referralForm) {
+  referralForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const referrer = document.getElementById('referrerName')?.value.trim();
+    const lead = document.getElementById('leadName')?.value.trim();
+    if (!referrer) {
+      document.getElementById('referrerName')?.focus();
+      return;
+    }
+    const message = `Olá, vim pelo site da DFLIX e fui indicado por ${referrer}.${lead ? ` Meu nome é ${lead}.` : ''} Quero fazer o teste grátis de 4 horas e conhecer os planos. Em caso de assinatura, quero que a indicação seja registrada para o indicador ganhar 1 mês grátis.`;
+    window.open(`https://wa.me/5551995460187?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+  });
+}

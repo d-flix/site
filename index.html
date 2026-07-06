@@ -13,6 +13,7 @@
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="apple-touch-icon" href="assets/favicon-180.png" />
   <link rel="preload" href="assets/dflix-logo-transparent.png" as="image" />
+  <link rel="preload" href="assets/hero-cinema-wall.webp" as="image" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -33,6 +34,7 @@
         <a href="#apps">Apps</a>
         <a href="#pontos">3 pontos</a>
         <a href="#planos">Planos</a>
+        <a href="#indicacao">Indicação</a>
         <a href="#suporte">Suporte</a>
         <a class="nav-cta" href="https://wa.me/5551995460187?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20DFLIX%20e%20quero%20fazer%20um%20teste%20gr%C3%A1tis%20de%204%20horas." target="_blank" rel="noopener">Teste grátis</a>
       </div>
@@ -84,11 +86,11 @@
 
         <div class="catalog-grid reveal delay-1" aria-label="Prévia de conteúdos e categorias">
           <article class="catalog-card wide">
-            <img src="assets/poster-panico.webp" alt="Capa de filme de terror" loading="lazy" />
+            <img src="assets/poster-rip.webp" alt="Capa de conteúdo em destaque" loading="lazy" />
             <div><span>Filmes</span><strong>Terror, ação, comédia e lançamentos</strong></div>
           </article>
           <article class="catalog-card">
-            <img src="assets/poster-diabo-prada.webp" alt="Capa de filme de comédia/drama" loading="lazy" />
+            <img src="assets/poster-backrooms.webp" alt="Capa de conteúdo em destaque" loading="lazy" />
             <div><span>Clássicos</span><strong>Opções para toda família</strong></div>
           </article>
           <article class="catalog-card">
@@ -227,6 +229,34 @@
       </div>
     </section>
 
+    <section class="section-pad referral-section" id="indicacao">
+      <div class="container referral-grid">
+        <div class="section-heading left reveal">
+          <p class="eyebrow">Área de indicação</p>
+          <h2>Indique a DFLIX e ganhe 1 mês grátis.</h2>
+          <p>O indicado informa o nome de quem recomendou a DFLIX. Em caso de assinatura confirmada, o cliente indicador ganha <b>1 mês grátis</b> como agradecimento.</p>
+          <div class="referral-rules" aria-label="Como funciona a indicação">
+            <div><span>01</span><strong>Informe o indicador</strong><small>Digite o nome do cliente que recomendou.</small></div>
+            <div><span>02</span><strong>Teste com suporte</strong><small>Nossa equipe orienta instalação e uso.</small></div>
+            <div><span>03</span><strong>Assinou, ganhou</strong><small>O indicador recebe 1 mês grátis.</small></div>
+          </div>
+        </div>
+
+        <form class="referral-card reveal delay-1" id="referralForm">
+          <div class="referral-card-top">
+            <span>Indicação premiada</span>
+            <strong>Comece pelo WhatsApp</strong>
+          </div>
+          <label for="referrerName">Nome de quem te indicou</label>
+          <input id="referrerName" name="referrerName" type="text" placeholder="Ex: João, Maria, Gustavo..." autocomplete="name" />
+          <label for="leadName">Seu nome</label>
+          <input id="leadName" name="leadName" type="text" placeholder="Ex: Pedro Santos" autocomplete="name" />
+          <button class="btn btn-primary btn-glow" type="submit">Enviar indicação</button>
+          <p class="referral-note">O WhatsApp abrirá com a mensagem pronta. A bonificação é validada após a assinatura do indicado.</p>
+        </form>
+      </div>
+    </section>
+
     <section class="section-pad support-section" id="suporte">
       <div class="container support-grid">
         <div class="support-card reveal">
@@ -299,7 +329,7 @@
     <div class="container footer-grid">
       <div>
         <img src="assets/dflix-logo-transparent.png" alt="DFLIX" />
-        <p>DFLIX IPTV: planos flexíveis, aplicativos próprios, suporte humanizado e teste grátis.</p>
+        <p>DFLIX IPTV: planos flexíveis, aplicativos próprios, indicação premiada, suporte humanizado e teste grátis.</p>
       </div>
       <div>
         <strong>WhatsApp</strong>

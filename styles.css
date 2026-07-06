@@ -110,3 +110,85 @@ p{color:var(--muted);line-height:1.64}
 @media (min-width:820px){body{padding-bottom:0}.section-pad{padding:96px 0}.menu-btn{display:none}.menu-links{position:static;display:flex;align-items:center;gap:6px;transform:none;opacity:1;pointer-events:auto;background:transparent;border:0;box-shadow:none;padding:0}.menu-links a{font-size:.9rem;padding:10px 12px;color:#ddd0d0}.nav-cta{padding:12px 16px!important}.brand img{height:42px}.hero{padding-top:86px}.hero-grid{grid-template-columns:minmax(0,1.02fr) minmax(360px,.98fr);gap:56px}.hero-media{min-height:430px}.hero-copy{padding-top:10px}.screen-shell{border-radius:34px;padding:13px}.screen-shell img{border-radius:24px}.badge-one{left:-28px;bottom:54px}.badge-two{right:-22px;top:48px}.catalog-grid{grid-template-columns:1.25fr .8fr .8fr .8fr .8fr;grid-auto-rows:150px}.catalog-card{min-height:0}.catalog-card.wide{grid-column:span 2;grid-row:span 2}.catalog-card.mini{min-height:0}.catalog-card.much-more{grid-column:span 2}.update-strip{grid-template-columns:1fr auto;padding:22px 24px}.apps-grid{grid-template-columns:repeat(3,1fr);align-items:stretch}.app-card{display:flex;flex-direction:column}.app-card img{height:198px}.app-info{flex:1}.points-grid{grid-template-columns:.85fr 1.15fr}.points-example{grid-template-columns:repeat(3,1fr)}.points-example div{grid-template-columns:1fr}.points-example span{grid-row:auto;margin-bottom:10px}.plans-grid{grid-template-columns:1fr 1fr;align-items:start}.support-grid{grid-template-columns:1.2fr .8fr}.steps-grid{grid-template-columns:repeat(3,1fr)}.faq-grid{grid-template-columns:.82fr 1.18fr}.footer-grid{grid-template-columns:1.4fr .6fr 1fr;align-items:start}.whats-float{left:auto;right:24px;bottom:24px;border-radius:999px}}
 @media (min-width:1080px){.catalog-card.wide{grid-column:span 2;grid-row:span 2}.screen-main{transform:perspective(900px) rotateY(-6deg) rotateX(2deg)}.hero-media:after{content:"";position:absolute;width:68%;height:70px;left:15%;bottom:-16px;background:rgba(255,23,61,.18);filter:blur(34px);border-radius:50%;z-index:-1}.app-card:hover,.catalog-card:hover,.plan-card:hover{transform:translateY(-4px)}.app-card,.catalog-card,.plan-card{transition:.28s}}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+/* Refinamento V8: premium limpo, mobile-first e sem sobreposição */
+html, body { max-width: 100%; overflow-x: hidden; }
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+.container, .nav { max-width: min(1180px, calc(100vw - 28px)); }
+.hero { position: relative; isolation: isolate; }
+.hero::before { content:""; position:absolute; inset:0; z-index:-2; background: linear-gradient(90deg, rgba(6,2,4,.96) 0%, rgba(6,2,4,.86) 38%, rgba(6,2,4,.58) 100%), linear-gradient(180deg, rgba(6,2,4,.72), rgba(6,2,4,.98)), url("assets/hero-cinema-wall.webp") center/cover no-repeat; opacity:.92; }
+.hero::after { content:""; position:absolute; inset:auto 0 -1px 0; height:180px; z-index:-1; background: linear-gradient(to bottom, transparent, var(--bg)); pointer-events:none; }
+.hero-copy, .hero-media, .screen-shell, .catalog-card, .app-card, .plan-card, .support-card, .hours-card, .referral-card { min-width:0; }
+.hero h1, .section-heading h2, .support-card h2, .final-card h2, .plan-card h3, .app-info h3 { overflow-wrap: anywhere; }
+.hero-text, p, small, span, strong, b, a, input, button { overflow-wrap: anywhere; }
+.hero-media { z-index: 1; }
+.screen-shell img, .app-card img, .catalog-card img { width: 100%; height: auto; max-width: 100%; object-fit: cover; }
+.catalog-card img { height: 100%; }
+.catalog-card.mini img { object-fit: contain; padding: 18px; }
+.catalog-card.much-more img { object-fit: cover; }
+.update-strip, .test-cta { overflow: hidden; }
+.price-row { min-width:0; }
+.price-row > div, .price-row strong { min-width:0; }
+.price-row strong { white-space: nowrap; }
+.btn { text-align:center; }
+
+.referral-section { position:relative; }
+.referral-section::before { content:""; position:absolute; inset: 7% 0 auto auto; width:min(560px, 75vw); height:420px; background: radial-gradient(circle, rgba(255,23,61,.18), transparent 68%); filter: blur(14px); pointer-events:none; }
+.referral-grid { display:grid; gap:18px; position:relative; }
+.referral-rules { display:grid; gap:10px; margin-top:22px; }
+.referral-rules div { border:1px solid var(--line); background:rgba(255,255,255,.045); border-radius:20px; padding:14px; display:grid; grid-template-columns:auto 1fr; gap:4px 12px; align-items:start; }
+.referral-rules span { grid-row:1/3; width:38px; height:38px; display:grid; place-items:center; border-radius:14px; background:linear-gradient(135deg,var(--red),var(--gold)); color:#180407; font-weight:1000; font-size:.78rem; }
+.referral-rules strong { display:block; line-height:1.18; }
+.referral-rules small { color:var(--muted); line-height:1.45; }
+.referral-card { border:1px solid rgba(255,199,101,.22); border-radius:var(--radius2); padding:18px; background: linear-gradient(180deg, rgba(255,255,255,.095), rgba(255,255,255,.035)); box-shadow:var(--shadow); overflow:hidden; position:relative; }
+.referral-card::before { content:""; position:absolute; inset:0; background: radial-gradient(circle at 84% 0%, rgba(255,199,101,.16), transparent 32%), radial-gradient(circle at 0% 100%, rgba(255,23,61,.14), transparent 38%); pointer-events:none; }
+.referral-card > * { position:relative; }
+.referral-card-top { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; margin-bottom:16px; }
+.referral-card-top span { color:var(--gold); text-transform:uppercase; letter-spacing:.12em; font-size:.72rem; font-weight:1000; }
+.referral-card-top strong { color:#fff; font-size:1.06rem; text-align:right; }
+.referral-card label { display:block; color:#f4e8e8; font-weight:900; margin:14px 0 8px; }
+.referral-card input { width:100%; min-height:52px; border:1px solid var(--line2); border-radius:16px; background:rgba(0,0,0,.28); color:#fff; padding:0 14px; outline:none; }
+.referral-card input::placeholder { color:#8e8084; }
+.referral-card input:focus { border-color:rgba(255,199,101,.45); box-shadow:0 0 0 4px rgba(255,199,101,.08); }
+.referral-card .btn { width:100%; margin-top:16px; }
+.referral-note { color:var(--muted); font-size:.9rem; line-height:1.55; margin:12px 0 0; }
+
+@media (min-width:820px) {
+  .referral-grid { grid-template-columns:.95fr 1.05fr; align-items:center; gap:34px; }
+  .referral-card { padding:24px; }
+}
+
+@media (max-width:819px) {
+  .hero::before { background: linear-gradient(180deg, rgba(6,2,4,.88), rgba(6,2,4,.98) 72%), url("assets/hero-cinema-wall.webp") center top/cover no-repeat; opacity:.82; }
+  .menu-links.open { max-width:100%; }
+  .hero-grid, .points-grid, .support-grid, .faq-grid { max-width:100%; }
+  .section-heading h2 { font-size: clamp(2rem, 9vw, 3rem); line-height:1.02; letter-spacing:-.055em; }
+  .hero h1 { font-size: clamp(2.7rem, 13vw, 4.4rem); line-height:.96; letter-spacing:-.065em; }
+  .hero-media { margin-top:6px; }
+  .screen-shell { transform:none!important; }
+  .floating-badge { max-width: 45%; }
+  .apps-grid, .plans-grid { width:100%; }
+  .app-card img { aspect-ratio: 16 / 10; height:auto; object-fit:cover; }
+}
+
+@media (max-width:520px) {
+  .container, .nav { max-width: calc(100vw - 22px); }
+  .section-pad { padding: 58px 0; }
+  .hero { padding-top: 42px; }
+  .hero-actions { gap:10px; }
+  .hero-actions .btn, .test-cta .btn, .support-card .btn, .final-card .btn { width:100%; }
+  .quick-stats div { padding:13px; }
+  .screen-caption { position: static; margin-top:10px; border-radius:18px; }
+  .floating-badge { position: static; display:inline-flex; margin:10px 8px 0 0; vertical-align:top; max-width:none; }
+  .catalog-grid { gap:10px; }
+  .catalog-card { min-height: 170px; border-radius:22px; }
+  .catalog-card.wide { min-height:230px; }
+  .catalog-card.mini { min-height:110px; }
+  .catalog-card div { padding:14px; }
+  .catalog-card strong { font-size:.98rem; line-height:1.18; }
+  .price-row { grid-template-columns:1fr; align-items:stretch; }
+  .price-row strong { white-space:normal; font-size:1.45rem; }
+  .referral-card-top { display:block; }
+  .referral-card-top strong { display:block; text-align:left; margin-top:5px; }
+  .whats-float { left:12px; right:12px; bottom:12px; }
+}
