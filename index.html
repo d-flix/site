@@ -1,349 +1,532 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#080306" />
-  <meta name="description" content="DFLIX IPTV: planos com 3 pontos simultâneos, plano 1 tela, teste grátis de 4 horas, apps próprios e atendimento humanizado todos os dias." />
-  <meta property="og:title" content="DFLIX IPTV | Entretenimento completo com atendimento humano" />
-  <meta property="og:description" content="Teste grátis de 4 horas. Plano 3 pontos por R$29,90/mês. Atendimento direto pelo WhatsApp." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/dflix-icon.png" />
-  <title>DFLIX IPTV | Streaming premium com suporte humanizado</title>
-  <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <link rel="apple-touch-icon" href="assets/favicon-180.png" />
-  <link rel="preload" href="assets/dflix-logo-transparent.png" as="image" />
-  <link rel="preload" href="assets/hero-cinema-wall.webp" as="image" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080808">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="DFLIX: entretenimento para a casa toda, com até 3 telas simultâneas, teste grátis de 4 horas, configuração orientada e atendimento humanizado.">
+  <meta property="og:title" content="DFLIX | 3 telas simultâneas por R$ 29,90">
+  <meta property="og:description" content="Um plano para a casa toda. Teste grátis por 4 horas e confira no seu aparelho antes de assinar.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dflix.site/">
+  <meta property="og:image" content="https://dflix.site/assets/dflix-icon.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>DFLIX | 3 telas simultâneas para a casa toda</title>
+
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon-180.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preload" href="assets/dflix-logo-transparent.png" as="image">
+  <link rel="preload" href="assets/app-dflix-smart-tv.webp" as="image">
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "DFLIX",
+    "url": "https://dflix.site/",
+    "logo": "https://dflix.site/assets/dflix-icon.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+55-51-99546-0187",
+      "contactType": "customer service",
+      "availableLanguage": "Portuguese"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "O que são 3 telas simultâneas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O plano permite até três acessos ao mesmo tempo. Por exemplo: uma TV na sala, outra no quarto e um celular usando juntos no mesmo plano."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso testar antes de assinar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. A DFLIX oferece teste grátis de 4 horas para você conferir a instalação e o funcionamento no aparelho compatível antes de escolher um plano."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "A DFLIX ajuda na instalação?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. O atendimento orienta a escolha do aplicativo, a instalação e os primeiros passos no aparelho compatível."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-  <div class="page-glow page-glow-red" aria-hidden="true"></div>
-  <div class="page-glow page-glow-gold" aria-hidden="true"></div>
-  <div class="noise" aria-hidden="true"></div>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-  <header class="topbar" id="topo">
-    <nav class="nav" aria-label="Navegação principal">
-      <a class="brand" href="#topo" aria-label="DFLIX - início">
-        <img src="assets/dflix-logo-transparent.png" alt="DFLIX" />
+  <header class="site-header" id="topo">
+    <div class="shell header-inner">
+      <a class="brand" href="#topo" aria-label="DFLIX — início">
+        <img src="assets/dflix-logo-transparent.png" alt="DFLIX" width="172" height="55">
       </a>
-      <button class="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-links">
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
         <span></span><span></span><span></span>
       </button>
-      <div class="menu-links" id="menu-links">
-        <a href="#catalogo">Catálogo</a>
-        <a href="#apps">Apps</a>
-        <a href="#pontos">3 pontos</a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+        <a href="#telas">3 telas</a>
+        <a href="#aparelhos">Aparelhos</a>
+        <a href="#avaliacoes">Avaliações</a>
         <a href="#planos">Planos</a>
         <a href="#indicacao">Indicação</a>
-        <a href="#suporte">Suporte</a>
-        <a class="nav-cta" href="https://wa.me/5551995460187?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20DFLIX%20e%20quero%20fazer%20um%20teste%20gr%C3%A1tis%20de%204%20horas." target="_blank" rel="noopener">Teste grátis</a>
-      </div>
-    </nav>
+        <a href="#duvidas">Dúvidas</a>
+        <a class="header-cta" data-wa="teste" href="#">Teste grátis</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="hero section-pad">
-      <div class="container hero-grid">
+  <main id="conteudo">
+    <section class="hero section-dark">
+      <div class="hero-backdrop" aria-hidden="true"></div>
+      <div class="shell hero-layout">
         <div class="hero-copy reveal">
-          <p class="eyebrow"><span class="pulse-dot"></span> DFLIX IPTV • teste grátis de 4 horas</p>
-          <h1>Seu entretenimento com visual de streaming premium.</h1>
-          <p class="hero-text">Planos completos, aplicativos próprios, conteúdos atualizados toda semana e atendimento humano para instalar, configurar e ajudar sempre que precisar.</p>
+          <p class="kicker"><span></span> Plano para a casa toda</p>
+          <h1>Três telas.<br>Uma assinatura.<br><em>Todo mundo assistindo.</em></h1>
+          <p class="hero-lead">Enquanto alguém acompanha o jogo na sala, outra pessoa vê uma série no quarto e outra assiste pelo celular — no mesmo plano.</p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary btn-glow" href="https://wa.me/5551995460187?text=Ol%C3%A1%2C%20quero%20fazer%20o%20teste%20gr%C3%A1tis%20de%204%20horas%20da%20DFLIX." target="_blank" rel="noopener">Começar teste grátis</a>
-            <a class="btn btn-soft" href="#planos">Ver planos</a>
+            <a class="button button-primary" data-wa="teste" href="#">Começar teste grátis</a>
+            <a class="button button-secondary" href="#telas">Entender as 3 telas</a>
           </div>
 
-          <div class="quick-stats" aria-label="Destaques DFLIX">
-            <div><strong>3 pontos</strong><span>ao mesmo tempo</span></div>
-            <div><strong>R$29,90</strong><span>plano principal</span></div>
-            <div><strong>Semanal</strong><span>atualização de conteúdos</span></div>
+          <div class="hero-proof" aria-label="Resumo do plano principal">
+            <div><strong>R$ 29,90</strong><span>por mês</span></div>
+            <div><strong>3 acessos</strong><span>simultâneos</span></div>
+            <div><strong>4 horas</strong><span>de teste grátis</span></div>
           </div>
         </div>
 
-        <div class="hero-media reveal delay-1" aria-label="Prévia dos aplicativos DFLIX">
-          <div class="screen-shell screen-main">
-            <div class="screen-top"><span></span><span></span><span></span><b>DFLIX PLAY</b></div>
-            <img src="assets/app-dflix-smart-tv.webp" alt="Layout do aplicativo próprio DFLIX na Smart TV" />
-            <div class="screen-caption">
-              <strong>Apps próprios</strong>
-              <span>TV ao vivo • filmes • séries • troca de servidor</span>
-            </div>
+        <div class="device-composition reveal delay-1" aria-label="Demonstração visual de três aparelhos usando a DFLIX">
+          <div class="orbit-mark" aria-hidden="true">D</div>
+          <div class="device device-tv">
+            <div class="device-bar"><span></span><span></span><span></span><b>TV DA SALA</b></div>
+            <img src="assets/app-dflix-smart-tv.webp" alt="Aplicativo DFLIX exibido em uma televisão">
+            <div class="device-label"><span>01</span><strong>Esportes ao vivo</strong></div>
           </div>
-          <div class="floating-badge badge-one"><b>4h</b><span>teste grátis</span></div>
-          <div class="floating-badge badge-two"><b>Suporte</b><span>humanizado</span></div>
+          <div class="device device-tablet">
+            <img src="assets/app-kplay-smart-tv.webp" alt="Aplicativo exibido em um segundo aparelho">
+            <div class="device-label"><span>02</span><strong>Séries no quarto</strong></div>
+          </div>
+          <div class="device device-phone">
+            <img src="assets/app-android-tvbox.webp" alt="Aplicativo exibido em um celular">
+            <div class="device-label"><span>03</span><strong>Filmes no celular</strong></div>
+          </div>
+          <div class="live-pill"><i></i> 3 aparelhos conectados</div>
         </div>
       </div>
     </section>
 
-    <section class="section-pad catalog-section" id="catalogo">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Catálogo organizado</p>
-          <h2>Filmes, séries, canais, esportes e muito mais em uma experiência simples.</h2>
-          <p>Organizamos as capas e referências de conteúdo em um formato visual, moderno e compacto, sem deixar o site pesado ou poluído.</p>
-        </div>
+    <section class="trust-strip" aria-label="Diferenciais da DFLIX">
+      <div class="shell trust-grid">
+        <div><span>01</span><strong>Teste antes de pagar</strong><small>Confira no seu aparelho por 4 horas.</small></div>
+        <div><span>02</span><strong>Configuração acompanhada</strong><small>Orientação do começo ao primeiro acesso.</small></div>
+        <div><span>03</span><strong>Atendimento humano</strong><small>Suporte direto, sem respostas engessadas.</small></div>
+        <div><span>04</span><strong>Atualizações frequentes</strong><small>Catálogo renovado ao longo da semana.</small></div>
+      </div>
+    </section>
 
-        <div class="catalog-grid reveal delay-1" aria-label="Prévia de conteúdos e categorias">
-          <article class="catalog-card wide">
-            <img src="assets/poster-rip.webp" alt="Capa de conteúdo em destaque" loading="lazy" />
-            <div><span>Filmes</span><strong>Terror, ação, comédia e lançamentos</strong></div>
-          </article>
-          <article class="catalog-card">
-            <img src="assets/poster-backrooms.webp" alt="Capa de conteúdo em destaque" loading="lazy" />
-            <div><span>Clássicos</span><strong>Opções para toda família</strong></div>
-          </article>
-          <article class="catalog-card">
-            <img src="assets/logo-premiere.webp" alt="Referência de canal esportivo" loading="lazy" />
-            <div><span>Esportes</span><strong>Jogos e eventos ao vivo</strong></div>
-          </article>
-          <article class="catalog-card mini"><img src="assets/logo-netflix.webp" alt="Referência visual de catálogo" loading="lazy" /><span>Catálogo</span></article>
-          <article class="catalog-card mini"><img src="assets/logo-hbomax.webp" alt="Referência visual de catálogo" loading="lazy" /><span>Séries</span></article>
-          <article class="catalog-card mini"><img src="assets/logo-disney.webp" alt="Referência visual de catálogo" loading="lazy" /><span>Infantil</span></article>
-          <article class="catalog-card mini"><img src="assets/logo-paramount.webp" alt="Referência visual de catálogo" loading="lazy" /><span>Filmes</span></article>
-          <article class="catalog-card mini"><img src="assets/logo-appletv.webp" alt="Referência visual de catálogo" loading="lazy" /><span>Premium</span></article>
-          <article class="catalog-card much-more"><img src="assets/catalogo-muito-mais.webp" alt="E muito mais" loading="lazy" /></article>
-        </div>
-
-        <div class="update-strip reveal">
+    <section class="section section-light" id="telas">
+      <div class="shell">
+        <div class="section-intro split-intro reveal">
           <div>
-            <span>Atualização semanal</span>
-            <strong>Novos filmes, séries e episódios renovados toda semana.</strong>
+            <p class="overline">O diferencial que muda a rotina</p>
+            <h2>Não são “três perfis”.<br>São três pessoas assistindo juntas.</h2>
           </div>
-          <a href="https://wa.me/5551995460187?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20cat%C3%A1logo%20atualizado%20da%20DFLIX." target="_blank" rel="noopener">Consultar catálogo</a>
+          <p>Você não precisa esperar alguém sair para usar. O plano principal foi pensado para famílias, casais e casas com mais de um aparelho.</p>
+        </div>
+
+        <div class="screen-story reveal delay-1">
+          <article>
+            <div class="story-number">01</div>
+            <div class="story-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 5h18v12H3zM8 21h8M12 17v4"/></svg>
+            </div>
+            <p class="story-time">20h30 • sala</p>
+            <h3>Jogo na TV</h3>
+            <p>Um acesso fica na televisão principal sem bloquear os demais.</p>
+          </article>
+          <article>
+            <div class="story-number">02</div>
+            <div class="story-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 17h8"/></svg>
+            </div>
+            <p class="story-time">20h30 • quarto</p>
+            <h3>Série em outro aparelho</h3>
+            <p>Outro acesso funciona ao mesmo tempo, no conteúdo escolhido por quem está no quarto.</p>
+          </article>
+          <article>
+            <div class="story-number">03</div>
+            <div class="story-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+            </div>
+            <p class="story-time">20h30 • celular</p>
+            <h3>Filme onde estiver</h3>
+            <p>O terceiro acesso pode acompanhar pelo celular ou outro aparelho compatível.</p>
+          </article>
+          <div class="story-result">
+            <span>Um único plano</span>
+            <strong>3 telas simultâneas por R$ 29,90</strong>
+            <a data-wa="tres-telas" href="#">Quero testar as 3 telas <b>↗</b></a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section-pad app-section" id="apps">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Aplicativos próprios</p>
-          <h2>Interface bonita e prática para cada tipo de aparelho.</h2>
-          <p>O suporte indica o melhor app para seu dispositivo e ajuda na configuração para você começar sem complicação.</p>
+    <section class="section section-dark benefits-section">
+      <div class="shell">
+        <div class="section-intro centered reveal">
+          <p class="overline">Mais do que quantidade de conteúdo</p>
+          <h2>Uma experiência pensada para dar menos trabalho.</h2>
+          <p>Do primeiro contato à troca de aparelho, a DFLIX acompanha você nos pontos que mais costumam gerar dúvida.</p>
         </div>
 
-        <div class="apps-grid">
-          <article class="app-card reveal">
-            <img src="assets/app-kplay-smart-tv.webp" alt="Layout KPLAY para Smart TVs" loading="lazy" />
-            <div class="app-info">
-              <span>Smart TVs</span>
-              <h3>KPLAY</h3>
-              <p>Layout moderno para navegar entre TV ao vivo, filmes, séries e configurações de forma simples.</p>
-            </div>
+        <div class="benefit-grid">
+          <article class="benefit-card reveal">
+            <span class="benefit-index">A</span>
+            <h3>Você testa primeiro</h3>
+            <p>O teste gratuito permite conferir a instalação e o uso no seu aparelho antes de escolher o plano.</p>
+            <div class="benefit-line"></div>
+            <small>Sem pagar antes de verificar.</small>
           </article>
-          <article class="app-card reveal delay-1 featured-app">
-            <img src="assets/app-dflix-smart-tv.webp" alt="Layout DFLIX para Smart TVs" loading="lazy" />
-            <div class="app-info">
-              <span>DFLIX App</span>
-              <h3>Visual personalizado</h3>
-              <p>Experiência com identidade DFLIX, opções de filmes, séries, TV ao vivo, conta e troca de servidor.</p>
-            </div>
+          <article class="benefit-card reveal delay-1">
+            <span class="benefit-index">B</span>
+            <h3>O aplicativo certo para cada aparelho</h3>
+            <p>A orientação considera o modelo do dispositivo para indicar uma opção compatível e mais prática.</p>
+            <div class="benefit-line"></div>
+            <small>Smart TV, TV Box, celular e computador.</small>
           </article>
-          <article class="app-card reveal delay-2">
-            <img src="assets/app-android-tvbox.webp" alt="Layout verde e preto para TV Box e Android TV" loading="lazy" />
-            <div class="app-info">
-              <span>TV Box e Android TV</span>
-              <h3>Layout verde/preto</h3>
-              <p>Ideal para TV Box, Android TV e aparelhos compatíveis, com visual organizado e navegação por categorias.</p>
-            </div>
+          <article class="benefit-card reveal delay-2">
+            <span class="benefit-index">C</span>
+            <h3>Contato oficial sempre no site</h3>
+            <p>Mesmo que o número mude no futuro, o endereço oficial continuará indicando o canal correto de atendimento.</p>
+            <div class="benefit-line"></div>
+            <small>dflix.site é o ponto de referência.</small>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section-pad points-section" id="pontos">
-      <div class="container points-grid">
-        <div class="section-heading left reveal">
-          <p class="eyebrow">Entenda o plano principal</p>
-          <h2>O que significa 3 pontos ao mesmo tempo?</h2>
-          <p>É o diferencial mais forte da DFLIX: mais liberdade para a casa toda assistir sem precisar pagar por tela separada.</p>
-          <a class="btn btn-primary" href="https://wa.me/5551995460187?text=Ol%C3%A1%2C%20quero%20entender%20melhor%20o%20plano%20de%203%20pontos%20da%20DFLIX." target="_blank" rel="noopener">Tirar dúvida no WhatsApp</a>
-        </div>
+    <section class="section section-light device-section" id="aparelhos">
+      <div class="shell device-layout">
+        <div class="device-copy reveal">
+          <p class="overline">Onde você pretende assistir?</p>
+          <h2>Escolha o aparelho.<br>Nós orientamos o caminho.</h2>
+          <p>Selecione uma opção para conhecer a experiência indicada. A compatibilidade final é confirmada no atendimento antes do teste.</p>
 
-        <div class="points-card reveal delay-1">
-          <div class="points-example">
-            <div><span>1</span><strong>TV da sala</strong><small>assistindo canais</small></div>
-            <div><span>2</span><strong>TV do quarto</strong><small>assistindo série</small></div>
-            <div><span>3</span><strong>Celular</strong><small>assistindo filme</small></div>
+          <div class="device-tabs" role="tablist" aria-label="Tipos de aparelho">
+            <button class="device-tab is-active" type="button" role="tab" aria-selected="true" data-device="smart">Smart TV</button>
+            <button class="device-tab" type="button" role="tab" aria-selected="false" data-device="android">Android / TV Box</button>
+            <button class="device-tab" type="button" role="tab" aria-selected="false" data-device="mobile">Celular / PC</button>
           </div>
-          <div class="points-explain">
-            <h3>Os 3 podem usar juntos.</h3>
-            <p>O plano de 3 pontos libera até <b>3 acessos simultâneos</b> no mesmo plano. Na prática, pessoas diferentes podem assistir conteúdos diferentes ao mesmo tempo, em aparelhos diferentes.</p>
-            <ul>
-              <li>Não é “3 meses”. É uso simultâneo.</li>
-              <li>Não é pagar por cada tela. O valor é único.</li>
-              <li>Ideal para família, casal ou quem usa TV + celular.</li>
+
+          <div class="device-details" aria-live="polite">
+            <span id="deviceEyebrow">Para TVs compatíveis</span>
+            <h3 id="deviceTitle">Interface ampla e controle remoto</h3>
+            <p id="deviceText">Navegação criada para a tela grande, com categorias visíveis e orientação para instalar no modelo compatível.</p>
+            <ul id="deviceList">
+              <li>Configuração acompanhada</li>
+              <li>Aplicativo indicado conforme o aparelho</li>
+              <li>Teste antes da assinatura</li>
             </ul>
           </div>
+
+          <a class="text-link" data-wa="aparelho" href="#">Consultar meu aparelho <b>↗</b></a>
+        </div>
+
+        <div class="device-preview reveal delay-1">
+          <div class="preview-frame">
+            <div class="preview-top"><span id="deviceTag">SMART TV</span><b>DFLIX</b></div>
+            <img id="deviceImage" src="assets/app-dflix-smart-tv.webp" alt="Prévia do aplicativo para Smart TV">
+          </div>
+          <div class="compatibility-list">
+            <span>Samsung</span><span>LG</span><span>Android TV</span><span>TV Box</span><span>Celular</span><span>Computador</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section-pad plans-section" id="planos">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Planos DFLIX</p>
-          <h2>Escolha conforme seu uso: família ou individual.</h2>
-          <p>Todos os planos têm acesso à mesma quantidade de conteúdo. O que muda é a quantidade de telas simultâneas e o servidor do plano econômico.</p>
+    <section class="section catalog-section section-dark" id="catalogo">
+      <div class="shell catalog-layout">
+        <div class="catalog-visual reveal">
+          <div class="poster-card poster-one"><img src="assets/poster-rip.webp" alt="Capa ilustrativa de filme" loading="lazy"></div>
+          <div class="poster-card poster-two"><img src="assets/poster-backrooms.webp" alt="Capa ilustrativa de filme" loading="lazy"></div>
+          <div class="catalog-collage"><img src="assets/content-collage.webp" alt="Prévia visual do catálogo DFLIX" loading="lazy"></div>
+          <div class="catalog-stamp"><strong>Atualização</strong><span>frequente</span></div>
         </div>
 
-        <div class="plans-grid">
-          <article class="plan-card premium reveal">
-            <div class="plan-top">
-              <span class="plan-badge">Mais escolhido</span>
-              <h3>Plano 3 Pontos</h3>
-              <p>Até 3 aparelhos assistindo ao mesmo tempo. Melhor custo-benefício para casa, família e uso em mais de um dispositivo.</p>
-            </div>
-            <div class="prices-list">
-              <div class="price-row best"><div><b>Mensal</b><span>sem fidelidade</span></div><strong>R$29,90</strong><a href="https://wa.me/5551995460187?text=Ol%C3%A1%2C%20quero%20ativar%20o%20plano%20DFLIX%203%20pontos%20mensal%20por%20R%2429%2C90." target="_blank" rel="noopener">Ativar</a></div>
-              <div class="price-row"><div><b>Trimestral</b><span>3 meses</span></div><strong>R$79,90</strong><a href="https://wa.me/5551995460187?text=Ol%C3%A1%2C%20quero%20ativar%20o%20plano%20DFLIX%203%20pontos%20trimestral%20por%20R%2479%2C90." target="_blank" rel="noopener">Ativar</a></div>
-              <div class="price-row"><div><b>Semestral</b><span>6 meses</span></div><strong>R$149,90</strong><a href="https://wa.me/5551995460187?text=Ol%C3%A1%2C%20quero%20ativar%20o%20plano%20DFLIX%203%20pontos%20semestral%20por%20R%24149%2C90." target="_blank" rel="noopener">Ativar</a></div>
-              <div class="price-row"><div><b>Anual</b><span>12 meses</span></div><strong>R$209,90</strong><a href="https://wa.me/5551995460187?text=Ol%C3%A1%2C%20quero%20ativar%20o%20plano%20DFLIX%203%20pontos%20anual%20por%20R%24209%2C90." target="_blank" rel="noopener">Ativar</a></div>
-            </div>
-          </article>
-
-          <article class="plan-card economy reveal delay-1">
-            <div class="plan-top">
-              <span class="plan-badge muted">Individual</span>
-              <h3>Plano 1 Tela</h3>
-              <p>Opção econômica para quem assiste sozinho. Servidor um pouco inferior, mas com a mesma quantidade de conteúdo.</p>
-            </div>
-            <div class="prices-list">
-              <div class="price-row best"><div><b>Mensal</b><span>1 acesso por vez</span></div><strong>R$21,90</strong><a href="https://wa.me/5551995460187?text=Ol%C3%A1%2C%20quero%20ativar%20o%20plano%20DFLIX%201%20tela%20mensal%20por%20R%2421%2C90." target="_blank" rel="noopener">Ativar</a></div>
-              <div class="price-row"><div><b>Trimestral</b><span>3 meses</span></div><strong>R$57,90</strong><a href="https://wa.me/5551995460187?text=Ol%C3%A1%2C%20quero%20ativar%20o%20plano%20DFLIX%201%20tela%20trimestral%20por%20R%2457%2C90." target="_blank" rel="noopener">Ativar</a></div>
-              <div class="price-row"><div><b>Semestral</b><span>6 meses</span></div><strong>R$139,90</strong><a href="https://wa.me/5551995460187?text=Ol%C3%A1%2C%20quero%20ativar%20o%20plano%20DFLIX%201%20tela%20semestral%20por%20R%24139%2C90." target="_blank" rel="noopener">Ativar</a></div>
-              <div class="price-row"><div><b>Anual</b><span>12 meses</span></div><strong>R$189,90</strong><a href="https://wa.me/5551995460187?text=Ol%C3%A1%2C%20quero%20ativar%20o%20plano%20DFLIX%201%20tela%20anual%20por%20R%24189%2C90." target="_blank" rel="noopener">Ativar</a></div>
-            </div>
-          </article>
+        <div class="catalog-copy reveal delay-1">
+          <p class="overline">Conteúdo para diferentes momentos</p>
+          <h2>Do jogo ao filme de domingo, tudo em uma navegação organizada.</h2>
+          <p>A experiência reúne canais, filmes, séries, conteúdo infantil e esportes, com atualizações realizadas ao longo da semana.</p>
+          <div class="category-list">
+            <div><span>01</span><strong>Canais ao vivo</strong><small>Programação para acompanhar em tempo real.</small></div>
+            <div><span>02</span><strong>Filmes e séries</strong><small>Opções organizadas por categorias.</small></div>
+            <div><span>03</span><strong>Esportes</strong><small>Eventos e transmissões disponíveis no catálogo.</small></div>
+            <div><span>04</span><strong>Conteúdo infantil</strong><small>Alternativas para diferentes idades.</small></div>
+          </div>
+          <a class="button button-outline-light" data-wa="catalogo" href="#">Consultar o catálogo</a>
         </div>
+      </div>
+    </section>
 
-        <div class="test-cta reveal">
+    <section class="section section-light reviews-section" id="avaliacoes">
+      <div class="shell">
+        <div class="section-intro split-intro reveal">
           <div>
-            <span>Antes de ativar</span>
-            <h3>Peça seu teste grátis de 4 horas.</h3>
-            <p>Você confere a instalação, interface e funcionamento no seu aparelho antes de escolher o plano.</p>
+            <p class="overline">Avaliações reais</p>
+            <h2>O que clientes de longa data dizem.</h2>
           </div>
-          <a class="btn btn-primary btn-glow" href="https://wa.me/5551995460187?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20liberar%20meu%20teste%20gr%C3%A1tis%20de%204%20horas%20na%20DFLIX." target="_blank" rel="noopener">Liberar teste</a>
+          <p>Depoimentos recebidos diretamente no atendimento e publicados sem nomes ou dados pessoais.</p>
         </div>
+
+        <div class="review-toolbar reveal">
+          <div class="review-authenticity"><span>✓</span><strong>Relatos reais do WhatsApp</strong><small>Identidades preservadas</small></div>
+          <div class="review-controls" aria-label="Navegação das avaliações">
+            <button type="button" class="review-prev" aria-label="Avaliação anterior">←</button>
+            <button type="button" class="review-next" aria-label="Próxima avaliação">→</button>
+          </div>
+        </div>
+
+        <div class="reviews-track reveal delay-1" tabindex="0">
+          <article class="review-card">
+            <div class="quote-mark">“</div>
+            <blockquote>Estou amando. Tudo perfeito. Os filmes e as séries, estou amando mesmo.</blockquote>
+            <div class="review-meta">
+              <span class="anonymous-avatar">01</span>
+              <div><strong>Cliente DFLIX</strong><small>Assinante há 10 meses</small></div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="quote-mark">“</div>
+            <blockquote>Está ótima! ❤️</blockquote>
+            <div class="review-meta">
+              <span class="anonymous-avatar">02</span>
+              <div><strong>Cliente DFLIX</strong><small>Assinante há 9 meses</small></div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="quote-mark">“</div>
+            <blockquote>Estou gostando muito dos canais. Já vou fazer o PIX e te mandar.</blockquote>
+            <div class="review-meta">
+              <span class="anonymous-avatar">03</span>
+              <div><strong>Cliente DFLIX</strong><small>Assinante há 10 meses</small></div>
+            </div>
+          </article>
+        </div>
+
+        <p class="review-note reveal">Os textos foram ajustados apenas em pontuação para facilitar a leitura, preservando o sentido das mensagens originais.</p>
       </div>
     </section>
 
-    <section class="section-pad referral-section" id="indicacao">
-      <div class="container referral-grid">
-        <div class="section-heading left reveal">
-          <p class="eyebrow">Área de indicação</p>
-          <h2>Indique a DFLIX e ganhe 1 mês grátis.</h2>
-          <p>O indicado informa o nome de quem recomendou a DFLIX. Em caso de assinatura confirmada, o cliente indicador ganha <b>1 mês grátis</b> como agradecimento.</p>
-          <div class="referral-rules" aria-label="Como funciona a indicação">
-            <div><span>01</span><strong>Informe o indicador</strong><small>Digite o nome do cliente que recomendou.</small></div>
-            <div><span>02</span><strong>Teste com suporte</strong><small>Nossa equipe orienta instalação e uso.</small></div>
-            <div><span>03</span><strong>Assinou, ganhou</strong><small>O indicador recebe 1 mês grátis.</small></div>
+    <section class="section section-dark plans-section" id="planos">
+      <div class="shell">
+        <div class="section-intro centered reveal">
+          <p class="overline">Planos claros, sem complicação</p>
+          <h2>Escolha pela forma como você assiste.</h2>
+          <p>O plano de 3 telas é o principal destaque. Para uso individual, há uma opção com um acesso por vez.</p>
+        </div>
+
+        <div class="plan-switch reveal" role="tablist" aria-label="Escolha do tipo de plano">
+          <button type="button" class="plan-tab is-active" role="tab" aria-selected="true" data-plan="family">3 telas simultâneas</button>
+          <button type="button" class="plan-tab" role="tab" aria-selected="false" data-plan="individual">1 tela</button>
+        </div>
+
+        <div class="plan-stage reveal delay-1">
+          <div class="plan-summary">
+            <span class="plan-label" id="planLabel">PLANO CASA COMPLETA</span>
+            <h3 id="planTitle">Todo mundo assiste junto.</h3>
+            <p id="planDescription">Até três acessos simultâneos no mesmo plano, ideal para diferentes pessoas e aparelhos dentro de casa.</p>
+            <div class="plan-features" id="planFeatures">
+              <span>3 acessos ao mesmo tempo</span>
+              <span>Teste grátis de 4 horas</span>
+              <span>Configuração orientada</span>
+              <span>Atendimento humanizado</span>
+            </div>
+          </div>
+
+          <div class="price-panel">
+            <div class="price-highlight">
+              <span>Mensal</span>
+              <div><small>R$</small><strong id="mainPrice">29,90</strong><em>/mês</em></div>
+              <a class="button button-primary" id="mainPlanButton" data-wa-plan="3 telas mensal" href="#">Testar este plano</a>
+            </div>
+
+            <div class="price-options" id="priceOptions">
+              <button type="button" data-plan-name="3 telas trimestral"><span>Trimestral</span><strong>R$ 79,90</strong><small>3 meses</small></button>
+              <button type="button" data-plan-name="3 telas semestral"><span>Semestral</span><strong>R$ 149,90</strong><small>6 meses</small></button>
+              <button type="button" data-plan-name="3 telas anual"><span>Anual</span><strong>R$ 209,90</strong><small>12 meses</small></button>
+            </div>
           </div>
         </div>
 
-        <form class="referral-card reveal delay-1" id="referralForm">
-          <div class="referral-card-top">
-            <span>Indicação premiada</span>
-            <strong>Comece pelo WhatsApp</strong>
+        <p class="plan-disclaimer reveal">Os planos de maior duração são recomendados depois do teste e da confirmação de compatibilidade no aparelho.</p>
+      </div>
+    </section>
+
+    <section class="section section-light referral-section" id="indicacao">
+      <div class="shell referral-layout">
+        <div class="referral-copy reveal">
+          <p class="overline">Área de indicação</p>
+          <h2>Indicou, assinou:<br>você ganha 1 mês grátis.</h2>
+          <p>O novo cliente informa quem recomendou a DFLIX. Após a assinatura ser confirmada, a indicação é registrada e o benefício é liberado ao indicador.</p>
+
+          <div class="referral-steps">
+            <div><span>1</span><strong>Compartilhe a DFLIX</strong><small>Envie o site para um amigo.</small></div>
+            <div><span>2</span><strong>Ele informa seu nome</strong><small>O registro começa no formulário ao lado.</small></div>
+            <div><span>3</span><strong>Assinatura confirmada</strong><small>Você recebe um mês grátis.</small></div>
           </div>
-          <label for="referrerName">Nome de quem te indicou</label>
-          <input id="referrerName" name="referrerName" type="text" placeholder="Ex: João, Maria, Gustavo..." autocomplete="name" />
+        </div>
+
+        <form class="referral-form reveal delay-1" id="referralForm">
+          <div class="form-head">
+            <span>INDICAÇÃO PREMIADA</span>
+            <strong>Mensagem pronta para o WhatsApp</strong>
+          </div>
+
+          <label for="referrerName">Nome de quem indicou</label>
+          <input id="referrerName" name="referrerName" type="text" placeholder="Ex.: João, Maria..." autocomplete="name" required>
+
           <label for="leadName">Seu nome</label>
-          <input id="leadName" name="leadName" type="text" placeholder="Ex: Pedro Santos" autocomplete="name" />
-          <button class="btn btn-primary btn-glow" type="submit">Enviar indicação</button>
-          <p class="referral-note">O WhatsApp abrirá com a mensagem pronta. A bonificação é validada após a assinatura do indicado.</p>
+          <input id="leadName" name="leadName" type="text" placeholder="Ex.: Pedro Santos" autocomplete="name">
+
+          <button class="button button-primary" type="submit">Registrar e pedir o teste</button>
+          <small>A mensagem será aberta no WhatsApp. O benefício é validado após a confirmação da assinatura.</small>
         </form>
       </div>
     </section>
 
-    <section class="section-pad support-section" id="suporte">
-      <div class="container support-grid">
-        <div class="support-card reveal">
-          <p class="eyebrow">Atendimento DFLIX</p>
-          <h2>Suporte humanizado, atencioso e direto no WhatsApp.</h2>
-          <p>Você não fica sozinho: ajudamos na instalação, dúvidas, renovação, troca de aparelho, escolha do aplicativo e qualquer ajuste necessário para melhorar sua experiência.</p>
-          <a class="btn btn-primary" href="https://wa.me/5551995460187?text=Ol%C3%A1%2C%20preciso%20de%20atendimento%20da%20DFLIX." target="_blank" rel="noopener">Chamar atendimento</a>
+    <section class="section support-section section-dark" id="suporte">
+      <div class="shell support-layout">
+        <div class="support-main reveal">
+          <p class="overline">Atendimento DFLIX</p>
+          <h2>Suporte antes, durante e depois da assinatura.</h2>
+          <p>Ajudamos na instalação, escolha do aplicativo, troca de aparelho, renovação e dúvidas de uso. O contato oficial sempre estará atualizado neste site.</p>
+          <div class="support-actions">
+            <a class="button button-primary" data-wa="suporte" href="#">Chamar atendimento</a>
+            <a class="button button-outline-light" href="#duvidas">Ver dúvidas frequentes</a>
+          </div>
         </div>
-        <div class="hours-card reveal delay-1">
-          <span>Horários de atendimento</span>
-          <div><strong>Segunda a sexta</strong><b>7h às 22h</b></div>
-          <div><strong>Sábados, domingos e feriados</strong><b>12h às 21h</b></div>
-          <small>Chamou com problema? O objetivo é orientar e resolver da forma mais rápida possível.</small>
-        </div>
+
+        <aside class="support-hours reveal delay-1">
+          <div class="status-row"><i></i><span>Atendimento humanizado</span></div>
+          <div class="hours-row"><span>Segunda a sexta</span><strong>7h — 22h</strong></div>
+          <div class="hours-row"><span>Sábados, domingos e feriados</span><strong>12h — 21h</strong></div>
+          <div class="official-contact">
+            <span>CONTATO OFICIAL</span>
+            <a href="tel:+5551995460187">(51) 99546-0187</a>
+            <small>Consulte este site caso o número seja alterado.</small>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <section class="section-pad steps-section">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Comece sem complicação</p>
-          <h2>Três passos para testar.</h2>
+    <section class="section section-light faq-section" id="duvidas">
+      <div class="shell faq-layout">
+        <div class="section-intro reveal">
+          <p class="overline">Dúvidas frequentes</p>
+          <h2>O que vale saber antes do teste.</h2>
+          <p>Respostas diretas para entender a proposta, a instalação e a indicação.</p>
+          <a class="text-link" data-wa="duvidas" href="#">Falar com uma pessoa <b>↗</b></a>
         </div>
-        <div class="steps-grid">
-          <article class="step-card reveal"><span>01</span><h3>Chame no WhatsApp</h3><p>Informe seu aparelho: Smart TV, TV Box, celular, tablet ou outro compatível.</p></article>
-          <article class="step-card reveal delay-1"><span>02</span><h3>Receba a orientação</h3><p>Indicamos o aplicativo ideal e passamos o passo a passo de instalação.</p></article>
-          <article class="step-card reveal delay-2"><span>03</span><h3>Teste e escolha</h3><p>Use por 4 horas grátis e ative o plano que fizer mais sentido para você.</p></article>
-        </div>
-      </div>
-    </section>
 
-    <section class="section-pad faq-section" id="duvidas">
-      <div class="container faq-grid">
-        <div class="section-heading left reveal">
-          <p class="eyebrow">Dúvidas frequentes</p>
-          <h2>Respostas rápidas para decidir com segurança.</h2>
-        </div>
         <div class="faq-list reveal delay-1">
           <details open>
-            <summary>O plano 3 pontos é para 3 aparelhos?</summary>
-            <p>Ele permite até 3 acessos ao mesmo tempo. Exemplo: TV da sala, TV do quarto e celular funcionando juntos, no mesmo plano.</p>
+            <summary>O que são 3 telas simultâneas?</summary>
+            <p>São até três acessos funcionando ao mesmo tempo no mesmo plano. Por exemplo: TV da sala, TV do quarto e celular.</p>
           </details>
           <details>
-            <summary>O plano 1 tela tem menos conteúdo?</summary>
-            <p>Não. Ele possui a mesma quantidade de conteúdo, mas é uma opção individual com servidor um pouco inferior e apenas 1 acesso por vez.</p>
+            <summary>Posso testar antes de assinar?</summary>
+            <p>Sim. O teste é gratuito por 4 horas para você conferir a instalação e o funcionamento no aparelho compatível.</p>
           </details>
           <details>
             <summary>Vocês ajudam a instalar?</summary>
-            <p>Sim. O atendimento orienta qual aplicativo usar, como instalar e como acessar em aparelhos compatíveis.</p>
+            <p>Sim. O atendimento orienta a escolha do aplicativo, a instalação e os primeiros passos.</p>
           </details>
           <details>
-            <summary>O catálogo é atualizado?</summary>
-            <p>Sim. A DFLIX destaca atualização semanal de conteúdos, incluindo filmes, séries e episódios renovados.</p>
+            <summary>O plano individual tem um acesso por vez?</summary>
+            <p>Sim. Ele foi pensado para quem utiliza sozinho e não precisa de telas simultâneas.</p>
+          </details>
+          <details>
+            <summary>Como funciona a indicação?</summary>
+            <p>O indicado informa o nome de quem recomendou. Com a assinatura confirmada, o indicador recebe um mês grátis.</p>
+          </details>
+          <details>
+            <summary>Em quais aparelhos funciona?</summary>
+            <p>A compatibilidade depende do modelo e do sistema. Smart TVs, Android TV, TV Box, celular e computador estão entre as opções avaliadas pelo suporte.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <section class="final-cta section-pad">
-      <div class="container final-card reveal">
-        <img src="assets/dflix-icon.png" alt="DFLIX" />
-        <h2>Teste a DFLIX por 4 horas grátis.</h2>
-        <p>Chame agora no WhatsApp e receba atendimento para começar no seu aparelho.</p>
-        <a class="btn btn-primary btn-glow" href="https://wa.me/5551995460187?text=Ol%C3%A1%2C%20quero%20come%C3%A7ar%20meu%20teste%20gr%C3%A1tis%20de%204%20horas%20da%20DFLIX." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+    <section class="final-cta section-dark">
+      <div class="shell final-inner reveal">
+        <div>
+          <p class="overline">Teste no seu aparelho</p>
+          <h2>Quatro horas para conferir.<br>Sem precisar decidir no escuro.</h2>
+        </div>
+        <div>
+          <p>Chame no WhatsApp, informe seu aparelho e receba a orientação para começar.</p>
+          <a class="button button-primary" data-wa="teste" href="#">Liberar meu teste grátis</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <img src="assets/dflix-logo-transparent.png" alt="DFLIX" />
-        <p>DFLIX IPTV: planos flexíveis, aplicativos próprios, indicação premiada, suporte humanizado e teste grátis.</p>
+  <footer class="site-footer">
+    <div class="shell footer-main">
+      <div class="footer-brand">
+        <img src="assets/dflix-logo-transparent.png" alt="DFLIX" width="172" height="55">
+        <p>Entretenimento para a casa toda, com atendimento próximo e até três telas simultâneas.</p>
       </div>
-      <div>
-        <strong>WhatsApp</strong>
-        <a href="https://wa.me/5551995460187" target="_blank" rel="noopener">(51) 99546-0187</a>
+      <div class="footer-links">
+        <strong>Navegação</strong>
+        <a href="#telas">3 telas</a>
+        <a href="#aparelhos">Aparelhos</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#planos">Planos</a>
       </div>
-      <div>
-        <strong>Observação</strong>
-        <p>A disponibilidade de conteúdo, aplicativos e recursos pode variar conforme aparelho, plano e condições técnicas. Marcas exibidas nas imagens pertencem aos respectivos proprietários e são referências visuais.</p>
+      <div class="footer-links">
+        <strong>Atendimento</strong>
+        <a data-wa="suporte" href="#">WhatsApp</a>
+        <a href="tel:+5551995460187">(51) 99546-0187</a>
+        <a href="#indicacao">Área de indicação</a>
       </div>
+      <div class="footer-note">
+        <strong>Informações</strong>
+        <p>A disponibilidade de conteúdo, aplicativos e recursos pode variar conforme aparelho, plano e condições técnicas. As imagens de interface são ilustrativas.</p>
+      </div>
+    </div>
+    <div class="shell footer-bottom">
+      <span>© <span id="currentYear">2026</span> DFLIX. Todos os direitos reservados.</span>
+      <a href="#topo">Voltar ao topo ↑</a>
     </div>
   </footer>
 
-  <a class="whats-float" href="https://wa.me/5551995460187?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20DFLIX." target="_blank" rel="noopener" aria-label="Chamar DFLIX no WhatsApp">
-    <span>WhatsApp</span>
+  <a class="whatsapp-float" data-wa="site" href="#" aria-label="Falar com a DFLIX no WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 3.2 16.8L2 22l5.3-1.2A11 11 0 0 0 20.5 3.5ZM12 20a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.7.7-3-.2-.3A8.2 8.2 0 1 1 12 20Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.3 7.3 0 0 1-1.4-1.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4c.1-.1 0-.3 0-.4l-.8-1.9c-.2-.5-.5-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2 0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.5 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.7.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+    <span>Teste grátis</span>
   </a>
 
   <script src="script.js"></script>

@@ -1,10 +1,23 @@
-# DFLIX - Site premium com Área de Indicação
+# DFLIX — versão de avaliação
 
-Arquivos prontos para GitHub Pages. Substitua os arquivos do repositório pelos arquivos deste ZIP, mantendo `index.html`, `styles.css`, `script.js`, `404.html` e a pasta `assets` na raiz.
+Site estático pronto para GitHub Pages ou hospedagem convencional.
 
-Inclui:
-- frase inicial preservada do site base;
-- layout mobile-first corrigido para evitar texto fora da tela e sobreposição;
-- Área de Indicação funcional com WhatsApp;
-- regra: em caso de assinatura, o indicador ganha 1 mês grátis;
-- seções de catálogo, apps, 3 pontos, planos, suporte, FAQ e teste grátis.
+## Principais alterações
+
+- Nova home com foco em 3 telas simultâneas.
+- Demonstração visual de três aparelhos em uso.
+- Seção interativa por tipo de aparelho.
+- Avaliações reais sem nomes ou dados pessoais.
+- Planos em seletor interativo.
+- Área de indicação integrada ao WhatsApp.
+- Contato oficial destacado para reduzir impacto de futuras trocas de número.
+- FAQ, SEO básico, sitemap, robots.txt e manifest.
+- Layout mobile-first revisado para evitar sobreposição.
+
+## Publicação
+
+Substitua os arquivos do repositório pelo conteúdo desta pasta e publique pelo GitHub Pages. O arquivo principal é `index.html`.
+
+## Atenção
+
+Antes de publicar, confirme preços, horários, número de WhatsApp e textos dos planos.
